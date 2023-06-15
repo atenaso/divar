@@ -1,9 +1,22 @@
 "use client";
+
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+
 import ProductItem from "../../../components/ProductItem";
 import { sampleImageUrl } from "../Constants";
 import styled from "./ProductCard.module.css"
 import { useEffect, useState } from "react";
 import SearchInput from "../../../components/SearchInput";
+
+
+const queryClient = new QueryClient()
+
 
 const getProducts = async () => {
   try {
@@ -24,34 +37,12 @@ function ProductCard() {
   const [ImageUrl, setImageUrl] = useState(sampleImageUrl);
   const [Product, setProduct] = useState([]);
 
-
-
-
-  useEffect(async () => {
-    try {
-      const data = await getProducts();
-      setProduct( data.products);
-     
-    } catch (error) {
-      console.log(error)
-    }
-   
-  }, []);
-
   return (
     <>
+    <QueryClientProvider client={queryClient}>
     <SearchInput  />
-    <div className={styled.Cards}>
-     {
-      Product.map((Item) => (
-        <ProductItem key={Item.id}
-        Item={Item}
-       />
-      ))
-      
-      }
-   
-  </div>
+
+  </QueryClientProvider>
   </>
   );
 }
