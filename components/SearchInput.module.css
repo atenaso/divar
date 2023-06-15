@@ -1,0 +1,33 @@
+.Search{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    background-color: white;
+}
+
+.FormControl input{
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+.FormControl button{
+    padding: .8rem 2rem;
+    font-size: 1rem;
+    background-color: gray;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    outline: none;
+    border: none;
+}
+
+.Cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgb(252, 251, 251);
+    padding: 20px;
+}

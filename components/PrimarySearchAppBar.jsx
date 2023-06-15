@@ -6,8 +6,10 @@ import {
   Button,
   Typography,
   InputBase,
-  Link,
+  Link
+  
 } from "@mui/material";
+
 
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -15,9 +17,32 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import { css } from "@emotion/css";
+import styled from "@emotion/styled";
+import theme from "@emotion/styled";
+
+
+
+
+
 
 export default function PrimarySearchAppBar() {
+ 
+
+const LinkStyle1= styled(Link)`
+   
+
+   :hover {
+    background:#ededed;
+    borderRadius:"10px"
+   }
+
+   @media only screen and (max-width: 500px) {
+   display :none;
+  }
+  `;
+  
   return (
+    
     <div>
       <AppBar style={{ backgroundColor: "white" }}>
         <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
@@ -28,7 +53,10 @@ export default function PrimarySearchAppBar() {
               fontWeight: "bold",
               fontSize: "16px",
               padding: "5px 20px",
+             
+             
             }}
+          
           >
             ثبت آگهی
           </Button>
@@ -41,17 +69,21 @@ export default function PrimarySearchAppBar() {
             }}
           >
             <div>
-              <Link
+              <LinkStyle1
                 href=""
                 underline="none"
                 style={{
                   display: "flex",
                   alignItems: "center",
                   color: "#adaaaa",
+                  height:"40px",
+                  borderRadius:"7px",
+                  padding:"0 20px",
+                  
                 }}
               >
-                <Typography variant="h7">پشتیبانی</Typography>
-              </Link>
+                <Typography variant="h7" >پشتیبانی</Typography>
+              </LinkStyle1>
             </div>
             <div
               style={{
@@ -59,44 +91,53 @@ export default function PrimarySearchAppBar() {
                 alignItems: "center",
                 color: "#adaaaa",
                 margin: "0 30px",
+              
               }}
             >
-              <Link
+              <LinkStyle1
                 href=""
                 underline="none"
                 style={{
                   display: "flex",
                   alignItems: "center",
                   color: "#adaaaa",
+                  height:"40px",
+                  borderRadius:"7px",
+               
                 }}
               >
                 <Typography variant="h7" style={{ margin: "10px" }}>
                   چت
-                </Typography>
+                </Typography >
                 <ChatBubbleOutlineIcon />
-              </Link>
+              </LinkStyle1>
             </div>
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
                 color: "#adaaaa",
+                padding:"10px",
+               
               }}
             >
-              <Link
+              <LinkStyle1
                 href=""
                 underline="none"
                 style={{
                   display: "flex",
                   alignItems: "center",
                   color: "#adaaaa",
+                  height:"40px",
+                  borderRadius:"7px",
+                 
                 }}
               >
-                <Typography variant="h7" style={{ margin: "10px" }}>
+                <Typography variant="h7" style={{ margin: "10px" }} >
                   دیوار من
                 </Typography>
                 <PersonOutlineOutlinedIcon />
-              </Link>
+              </LinkStyle1>
             </div>
           </div>
 
@@ -135,18 +176,22 @@ export default function PrimarySearchAppBar() {
                 margin: " 0px 20px",
               }}
             >
-              <Link
+              <LinkStyle1
                 href=""
                 underline="none"
                 style={{
                   display: "flex",
                   alignItems: "center",
                   color: "#adaaaa",
+                  height:"40px",
+                  borderRadius:"7px",
+                  padding:"0 5px"
+                 
                 }}
               >
                 <KeyboardArrowDownIcon />
-                <Typography variant="h7">دیوار من</Typography>
-              </Link>
+                <Typography  >دیوار من</Typography>
+              </LinkStyle1>
             </div>
             <div
               style={{
@@ -156,13 +201,16 @@ export default function PrimarySearchAppBar() {
                 margin: " 0px 20px",
               }}
             >
-              <Link
+              <LinkStyle1
                 href=""
                 underline="none"
                 style={{
                   display: "flex",
                   alignItems: "center",
                   color: "#adaaaa",
+                  height:"40px",
+                  borderRadius:"7px",
+                  padding:"0 5px",
                 }}
               >
                 <div>
@@ -170,11 +218,11 @@ export default function PrimarySearchAppBar() {
                     variant="h7"
                     style={{ margin: "10px" }}
                     className={css`
-                      padding: 32px;
-                      font-size: 24px;
-                      border-radius: 4px;
                       &:hover {
                         color: red;
+                      }
+                      @media (max-width: 720px) {
+                        font-size: 50px;
                       }
                     `}
                   >
@@ -183,7 +231,7 @@ export default function PrimarySearchAppBar() {
                   </Typography>
                 </div>
                 <FmdGoodOutlinedIcon />
-              </Link>
+              </LinkStyle1>
             </div>
             <div style={{ margin: "0px 20px", fontWeight: "bold" }}>
               <Link

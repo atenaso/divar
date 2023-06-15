@@ -1,0 +1,26 @@
+.CardBox{
+    width: 30%;
+    height: 220px;
+margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 3px 5px #696767;
+    justify-content: space-between;
+    
+}
+.CardBox img{
+    height: 100%;
+    width:50%;
+    
+}
+.CardContent{
+   text-align: right;
+   padding: 10px 5px;
+   
+    }
+
+.CardContent h2{
+    margin-bottom: 30px;
+}
+.CardBrand ,.CardPrice , .CardStock{
+    margin-bottom: 10px;
+}
